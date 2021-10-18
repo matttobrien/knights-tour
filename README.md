@@ -1,0 +1,2 @@
+# KnightPuzzle
+Prolog program that finds a knight's path on a given N*N chessboard, where N is an input. It starts from the fixed location (1,1), then visits every square once. There are two files, 'knightPuzzle', which is a naive solution which tries any possible position, 'warnsdorffKnightPuzzle', which utilizes Warnsdorff's rule heuristic to find the best possible knight's path. Compile using swi-prolog or gprolog.
