@@ -43,3 +43,13 @@ possibleMove([X, Y], [NextX, NextY]) :- NextX is X + 2, NextY is Y - 1.
 % check if X is a member of list
 member(X,[X|_]). 
 member(X,[_|R]) :- member(X,R).
+
+% append/3
+append([], L, L).
+append([H|T], L, [H|R]) :-
+    append(T, L, R).
+
+% length/2
+length([ ], 0).
+length([_|T], I) :- 
+    length(T, J), I is J + 1.
