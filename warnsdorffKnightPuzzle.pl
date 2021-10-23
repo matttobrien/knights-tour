@@ -54,3 +54,13 @@ numberOfMovesFromThere([X, Y], Size, Path, Num) :-
 % check if X is a member of list
 member(X,[X|_]). 
 member(X,[_|R]) :- member(X,R).
+
+% append/3
+append([], L, L).
+append([H|T], L, [H|R]) :-
+    append(T, L, R).
+
+% length/2
+length([ ], 0).
+length([_|T], I) :- 
+    length(T, J), I is J + 1.
